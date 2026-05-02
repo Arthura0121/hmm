@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP World History: Modern — Ultimate Cheat Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --red: #c0392b;
+    --red-lt: #fdf0ef;
+    --orange: #d35400;
+    --orange-lt: #fef5ec;
+    --teal: #0f6e56;
+    --teal-lt: #e1f5ee;
+    --blue: #185fa5;
+    --blue-lt: #e6f1fb;
+    --purple: #534ab7;
+    --purple-lt: #eeedfe;
+    --amber: #854f0b;
+    --amber-lt: #faeeda;
+    --green: #3b6d11;
+    --green-lt: #eaf3de;
+    --gray: #444441;
+    --gray-lt: #f1efe8;
+    --border: #d3d1c7;
+    --text: #1a1a18;
+    --muted: #5f5e5a;
+    --page: #f8f6f1;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 7.5pt;
+    line-height: 1.45;
+    background: var(--page);
+    color: var(--text);
+    padding: 0.4in;
+  }
+
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18pt;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 3pt;
+    color: var(--text);
+  }
+  .page-subtitle {
+    text-align: center;
+    font-size: 7pt;
+    color: var(--muted);
+    margin-bottom: 8pt;
+    border-bottom: 1.5pt solid var(--red);
+    padding-bottom: 6pt;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5pt;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5pt;
+    margin-top: 5pt;
+  }
+  .col-span-2 { grid-column: span 2; }
+
+  .section {
+    border: 0.75pt solid var(--border);
+    border-radius: 5pt;
+    overflow: hidden;
+    background: white;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .section-header {
+    padding: 4pt 6pt 3pt;
+    display: flex;
+    align-items: baseline;
+    gap: 5pt;
+  }
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.1px;
+  }
+  .section-header .unit-tag {
+    font-size: 6pt;
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+  }
+
+  .sh-red { background: var(--red); }
+  .sh-orange { background: var(--orange); }
+  .sh-teal { background: var(--teal); }
+  .sh-blue { background: var(--blue); }
+  .sh-purple { background: var(--purple); }
+  .sh-amber { background: var(--amber); }
+  .sh-green { background: var(--green); }
+  .sh-gray { background: var(--gray); }
+
+  .section-body { padding: 5pt 6pt; }
+
+  .subsection {
+    margin-bottom: 5pt;
+  }
+  .subsection:last-child { margin-bottom: 0; }
+
+  .sub-title {
+    font-size: 7pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--muted);
+    border-bottom: 0.5pt solid var(--border);
+    padding-bottom: 2pt;
+    margin-bottom: 3pt;
+  }
+
+  p { margin-bottom: 2pt; }
+
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2pt 6pt;
+  }
+  .vocab-item { }
+  .vocab-term {
+    font-weight: 600;
+    color: var(--text);
+  }
+  .vocab-def {
+    color: var(--muted);
+    font-size: 7pt;
+  }
+
+  .mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7pt;
+    margin-top: 2pt;
+  }
+  .mini-table th {
+    background: var(--gray-lt);
+    padding: 2pt 4pt;
+    text-align: left;
+    font-weight: 600;
+    font-size: 6.5pt;
+    border-bottom: 0.5pt solid var(--border);
+  }
+  .mini-table td {
+    padding: 2pt 4pt;
+    border-bottom: 0.25pt solid var(--border);
+    vertical-align: top;
+  }
+  .mini-table tr:last-child td { border-bottom: none; }
+
+  .tip-box {
+    border-radius: 3pt;
+    padding: 3pt 5pt;
+    margin-top: 3pt;
+    font-size: 6.5pt;
+  }
+  .tip-red { background: var(--red-lt); border-left: 2pt solid var(--red); color: #7a1a14; }
+  .tip-teal { background: var(--teal-lt); border-left: 2pt solid var(--teal); color: #085041; }
+  .tip-amber { background: var(--amber-lt); border-left: 2pt solid var(--amber); color: var(--amber); }
+  .tip-blue { background: var(--blue-lt); border-left: 2pt solid var(--blue); color: var(--blue); }
+  .tip-purple { background: var(--purple-lt); border-left: 2pt solid var(--purple); color: var(--purple); }
+
+  .tag {
+    display: inline-block;
+    padding: 0pt 4pt;
+    border-radius: 2pt;
+    font-size: 6pt;
+    font-weight: 600;
+    margin-right: 2pt;
+    vertical-align: middle;
+  }
+  .tag-red { background: var(--red-lt); color: var(--red); }
+  .tag-teal { background: var(--teal-lt); color: var(--teal); }
+  .tag-blue { background: var(--blue-lt); color: var(--blue); }
+  .tag-amber { background: var(--amber-lt); color: var(--amber); }
+  .tag-purple { background: var(--purple-lt); color: var(--purple); }
+
+  ul {
+    padding-left: 8pt;
+    margin: 1pt 0;
+  }
+  li { margin-bottom: 1pt; }
+
+  .divider {
+    border: none;
+    border-top: 0.5pt solid var(--border);
+    margin: 4pt 0;
+  }
+
+  .big-year {
+    font-family: 'DM Serif Display', serif;
+    font-size: 9pt;
+    color: var(--muted);
+    float: right;
+    opacity: 0.6;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4pt;
+  }
+
+  .exam-banner {
+    background: var(--text);
+    color: white;
+    text-align: center;
+    padding: 4pt;
+    border-radius: 4pt;
+    font-size: 6.5pt;
+    margin-bottom: 5pt;
+    letter-spacing: 0.2px;
+  }
+  .exam-banner strong { color: #fac775; }
+
+  .key-people {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2pt;
+  }
+  .person {
+    background: var(--gray-lt);
+    border-radius: 2pt;
+    padding: 2pt 4pt;
+  }
+  .person-name { font-weight: 600; font-size: 7pt; }
+  .person-fact { font-size: 6.5pt; color: var(--muted); }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  @media print {
+    body { padding: 0.3in; background: white; }
+    .section { break-inside: avoid; }
+    @page { size: 11in 17in; margin: 0.3in; }
+  }
+</style>
+</head>
+<body>
+
+<div class="exam-banner">
+  <strong>AP WORLD HISTORY: MODERN</strong> &nbsp;|&nbsp; Sec I: 55 MC (55 min, 40%) + 3 SAQ (40 min, 20%) &nbsp;|&nbsp; Sec II: DBQ 7 docs (60 min, 25%) + LEQ choose 1 of 3 (40 min, 15%) &nbsp;|&nbsp; Total: 3 hr 15 min
+</div>
+
+<div class="page-title">AP World History: Modern — Ultimate Cheat Sheet</div>
+<div class="page-subtitle">Every key term, person, event, and concept you need — Units 1–9 | c. 1200–present</div>
+
+<div class="grid">
+
+  <!-- UNIT 1-2A: GLOBAL TAPESTRY -->
+  <div class="section col-span-2">
+    <div class="section-header sh-red">
+      <h2>Units 1–2A: Global Tapestry &amp; Societies</h2>
+      <span class="unit-tag">c. 1200–1450</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Major States &amp; Empires</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Song China</span><span class="vocab-def"> — Neo-Confucianism, merit bureaucracy (civil service exam), foot-binding, gunpowder, movable type, magnetic compass, champa rice → pop. boom</span></div>
+            <div class="vocab-item"><span class="vocab-term">Mongol Empire</span><span class="vocab-def"> — largest contiguous land empire; divided into 4 khanates; Pax Mongolica = safe trade; spread Black Death via Silk Roads</span></div>
+            <div class="vocab-item"><span class="vocab-term">Delhi Sultanate</span><span class="vocab-def"> — Islamic rule in India; Hindu-Muslim tensions; Sultana Raziyya (female ruler)</span></div>
+            <div class="vocab-item"><span class="vocab-term">Mali Empire</span><span class="vocab-def"> — Mansa Musa (hajj 1324, flooded Cairo w/ gold); Timbuktu = learning center; Ibn Battuta visited</span></div>
+            <div class="vocab-item"><span class="vocab-term">Aztec (Mexica)</span><span class="vocab-def"> — tribute empire; chinampas (floating gardens); human sacrifice; Tenochtitlán = capital on lake</span></div>
+            <div class="vocab-item"><span class="vocab-term">Inca Empire</span><span class="vocab-def"> — mit'a labor system; quipu (knotted cords, record-keeping); no writing system; road network</span></div>
+            <div class="vocab-item"><span class="vocab-term">Dar al-Islam</span><span class="vocab-def"> — Abbasid Caliphate → fragmented; Seljuk Turks invaded; House of Wisdom = translation center in Baghdad</span></div>
+            <div class="vocab-item"><span class="vocab-term">Byzantine Empire</span><span class="vocab-def"> — E. Roman; Justinian's Code; Greek Orthodox Christianity; fell to Ottomans 1453</span></div>
+          </div>
+
+          <hr class="divider">
+          <div class="sub-title">Key Vocabulary</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Neo-Confucianism</span><span class="vocab-def"> — blend of Confucianism + Buddhism + Daoism; stressed social hierarchy</span></div>
+            <div class="vocab-item"><span class="vocab-term">Mandate of Heaven</span><span class="vocab-def"> — Chinese concept: ruler holds power by divine approval; lost through disasters/revolts</span></div>
+            <div class="vocab-item"><span class="vocab-term">Champa Rice</span><span class="vocab-def"> — fast-ripening rice from Vietnam → 2 harvests/yr → Chinese pop. growth</span></div>
+            <div class="vocab-item"><span class="vocab-term">Feudalism</span><span class="vocab-def"> — W. European system: lord → vassal → serf; land for military service</span></div>
+            <div class="vocab-item"><span class="vocab-term">Manorialism</span><span class="vocab-def"> — economic system tied to feudalism; serfs farm lord's land in exchange for protection</span></div>
+            <div class="vocab-item"><span class="vocab-term">Pax Mongolica</span><span class="vocab-def"> — "Mongol Peace"; stable trade/travel across Silk Roads under Mongol rule</span></div>
+            <div class="vocab-item"><span class="vocab-term">Mit'a</span><span class="vocab-def"> — Incan state labor draft; citizens owed labor to the state</span></div>
+            <div class="vocab-item"><span class="vocab-term">Quipu</span><span class="vocab-def"> — knotted string device used by Inca for record-keeping (no alphabet)</span></div>
+            <div class="vocab-item"><span class="vocab-term">Chinampa</span><span class="vocab-def"> — Aztec "floating gardens" built on lake beds to increase farmland</span></div>
+            <div class="vocab-item"><span class="vocab-term">Devshirme</span><span class="vocab-def"> — Ottoman: Christian boys taken, converted to Islam, trained as Janissaries or officials</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sub-title">Belief Systems &amp; Legitimacy</div>
+          <ul>
+            <li><strong>Islam:</strong> spread via trade, Sufi missionaries, military conquest; Five Pillars; Sharia law</li>
+            <li><strong>Buddhism:</strong> spread via monks &amp; merchants along Silk Roads; Theravada (SE Asia) vs. Mahayana (E. Asia)</li>
+            <li><strong>Christianity:</strong> Great Schism (1054) → E. Orthodox + Roman Catholic split; Crusades (1095–1291) = cultural exchange + ↑ trade</li>
+            <li><strong>Hinduism:</strong> caste system (jati); dominant in India; challenged by Delhi Sultanate</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Legitimacy Methods</div>
+          <table class="mini-table">
+            <tr><th>Method</th><th>Examples</th></tr>
+            <tr><td>Divine mandate / religion</td><td>Mandate of Heaven (China), Pope crowning Holy Roman Emperor</td></tr>
+            <tr><td>Monumental architecture</td><td>Great Mosque of Djenné, Notre Dame, Aztec temples</td></tr>
+            <tr><td>Legal codes</td><td>Justinian's Code, Sharia, Magna Carta (1215)</td></tr>
+            <tr><td>Military prowess</td><td>Mongols, Aztec tribute empire</td></tr>
+          </table>
+          <hr class="divider">
+          <div class="sub-title">Social &amp; Gender Structures</div>
+          <table class="mini-table">
+            <tr><th>Region</th><th>Labor System</th><th>Women's Status</th></tr>
+            <tr><td>W. Europe</td><td>Feudalism/serfdom</td><td>Limited property rights</td></tr>
+            <tr><td>China</td><td>Peasant farming</td><td>Foot-binding (elite)</td></tr>
+            <tr><td>Aztec</td><td>Tribute &amp; slavery</td><td>Some religious roles</td></tr>
+            <tr><td>Inca</td><td>Mit'a (state labor)</td><td>Acllacuna (chosen women)</td></tr>
+            <tr><td>Dar al-Islam</td><td>Free/slave soldiers</td><td>Inheritance rights (Quran)</td></tr>
+          </table>
+          <div class="tip-box tip-red">⚠ <strong>FRQ Tip:</strong> Always link belief systems to BOTH political legitimacy AND social hierarchy. Patriarchy was universal but varied in form.</div>
+          <div class="tip-box tip-teal">✓ Reconquista in Spain = Christians pushing out Muslims; completed 1492 same year Columbus sailed.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 1-2B: NETWORKS OF EXCHANGE -->
+  <div class="section col-span-2">
+    <div class="section-header sh-orange">
+      <h2>Units 1–2B: Networks of Exchange</h2>
+      <span class="unit-tag">c. 1200–1450</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Trade Networks</div>
+          <table class="mini-table">
+            <tr><th>Network</th><th>Key Goods</th><th>Key Feature</th></tr>
+            <tr><td><strong>Silk Roads</strong></td><td>Silk, spices, paper, glassware</td><td>Land routes; caravanserais; oases cities</td></tr>
+            <tr><td><strong>Indian Ocean</strong></td><td>Spices, textiles, gold, porcelain</td><td>Monsoon winds; dhows; diasporic merchants</td></tr>
+            <tr><td><strong>Trans-Saharan</strong></td><td>Gold, salt, enslaved people, ivory</td><td>Camels; Ghana/Mali/Songhai empires</td></tr>
+            <tr><td><strong>Mediterranean</strong></td><td>Grain, wine, textiles</td><td>Italian city-states (Venice, Genoa)</td></tr>
+            <tr><td><strong>Hanseatic League</strong></td><td>Furs, timber, grain, fish</td><td>N. European merchant guild alliance</td></tr>
+          </table>
+          <hr class="divider">
+          <div class="sub-title">Key Vocabulary</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Caravanserai</span><span class="vocab-def"> — roadside inn/rest stop along Silk Roads for merchants and camels</span></div>
+            <div class="vocab-item"><span class="vocab-term">Dhow</span><span class="vocab-def"> — Arab sailing vessel; lateen (triangular) sail; used on Indian Ocean</span></div>
+            <div class="vocab-item"><span class="vocab-term">Monsoon winds</span><span class="vocab-def"> — seasonal reversing winds enabling Indian Ocean trade (N to S, then S to N)</span></div>
+            <div class="vocab-item"><span class="vocab-term">Diasporic community</span><span class="vocab-def"> — merchant group settled abroad; maintained cultural identity; e.g. Arab merchants in E. Africa</span></div>
+            <div class="vocab-item"><span class="vocab-term">Bills of exchange</span><span class="vocab-def"> — early credit instrument; allowed merchants to avoid carrying coins</span></div>
+            <div class="vocab-item"><span class="vocab-term">Flying money</span><span class="vocab-def"> — early Chinese paper credit/money; reduced need to transport coins</span></div>
+            <div class="vocab-item"><span class="vocab-term">Syncretism</span><span class="vocab-def"> — blending of different cultural/religious traditions; e.g. Swahili culture = Bantu + Arabic</span></div>
+            <div class="vocab-item"><span class="vocab-term">Swahili</span><span class="vocab-def"> — E. African culture/language; blended Bantu + Arabic due to Indian Ocean trade</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sub-title">Cultural &amp; Tech Diffusion</div>
+          <ul>
+            <li><strong>Paper</strong> → Islamic world → Europe (via Silk Roads)</li>
+            <li><strong>Gunpowder &amp; compass</strong> → China → W. via Mongols</li>
+            <li><strong>Bantu migrations</strong> → spread iron, farming, languages across sub-Saharan Africa</li>
+            <li><strong>Black Death (1340s–50s)</strong> → originated in Central Asia → traveled Silk Roads → killed ~1/3 of Europe → labor shortage → ↑ wages → end of serfdom</li>
+            <li><strong>Zheng He</strong> — Chinese admiral; Ming treasure fleets (1405–33); explored Indian Ocean; turned inward = China did not colonize</li>
+            <li><strong>Ibn Battuta</strong> — Muslim traveler; visited Mali, India, SE Asia; primary source for 14th-century trade</li>
+            <li><strong>Marco Polo</strong> — Venetian traveler to Mongol China; spread awareness of Asian wealth</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Key People</div>
+          <div class="key-people">
+            <div class="person"><div class="person-name">Mansa Musa</div><div class="person-fact">Mali king; hajj (1324); flooded Cairo w/ gold; showed Mali wealth; built mosques</div></div>
+            <div class="person"><div class="person-name">Genghis Khan</div><div class="person-fact">United Mongol tribes; conquered Eurasia; died 1227; empire split among sons</div></div>
+            <div class="person"><div class="person-name">Kublai Khan</div><div class="person-fact">Mongol ruler of China; founded Yuan Dynasty; hosted Marco Polo</div></div>
+            <div class="person"><div class="person-name">Ibn Battuta</div><div class="person-fact">Moroccan traveler; ~75,000 miles; key primary source on 14th c. trade networks</div></div>
+          </div>
+          <div class="tip-box tip-amber">⚠ Don't confuse Ghana Empire (gold trade, ~800–1200) with modern Ghana (different location). Mali SUCCEEDED Ghana. Songhai succeeded Mali.</div>
+          <div class="tip-box tip-blue">✓ SAQ: Always name the SPECIFIC network — don't just say "trade routes." Silk Roads ≠ Indian Ocean ≠ Trans-Saharan.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 3-4A: EMPIRES & EXPLORATION -->
+  <div class="section col-span-2">
+    <div class="section-header sh-teal">
+      <h2>Units 3–4A: Land Empires &amp; Maritime Exploration</h2>
+      <span class="unit-tag">c. 1450–1750</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Land-Based Gunpowder Empires</div>
+          <table class="mini-table">
+            <tr><th>Empire</th><th>Key Features</th><th>Key Ruler</th></tr>
+            <tr><td><strong>Ottoman</strong></td><td>Devshirme, millet system, Janissaries; fell 1922</td><td>Suleiman the Magnificent</td></tr>
+            <tr><td><strong>Safavid</strong></td><td>Shi'a Islam (state religion); Isfahan capital; rival to Ottomans</td><td>Shah Abbas I</td></tr>
+            <tr><td><strong>Mughal</strong></td><td>Akbar's religious tolerance; Din-i Ilahi; Taj Mahal; declined w/ Aurangzeb</td><td>Akbar; Aurangzeb</td></tr>
+            <tr><td><strong>Qing</strong></td><td>Manchu rulers of China; queue mandate (pigtail); retained civil service exam</td><td>Kangxi; Qianlong</td></tr>
+            <tr><td><strong>Russian</strong></td><td>Expansion east into Siberia; serfdom; Romanov dynasty</td><td>Ivan the Terrible; Peter I</td></tr>
+            <tr><td><strong>Songhai</strong></td><td>Trans-Saharan trade hub; Timbuktu; fell to Moroccan invasion 1591</td><td>Sunni Ali; Askia Muhammad</td></tr>
+          </table>
+          <hr class="divider">
+          <div class="sub-title">Key Vocabulary — Empires</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Millet system</span><span class="vocab-def"> — Ottoman: non-Muslims (Jews, Christians) governed own communities under own laws</span></div>
+            <div class="vocab-item"><span class="vocab-term">Janissaries</span><span class="vocab-def"> — Ottoman elite infantry; boys taken via devshirme; converted to Islam</span></div>
+            <div class="vocab-item"><span class="vocab-term">Din-i Ilahi</span><span class="vocab-def"> — Akbar's syncretic religion blending Islam, Hinduism, Christianity, Zoroastrianism</span></div>
+            <div class="vocab-item"><span class="vocab-term">Queue</span><span class="vocab-def"> — Qing mandate: Han Chinese men must wear Manchu-style pigtail or face death</span></div>
+            <div class="vocab-item"><span class="vocab-term">Gunpowder empire</span><span class="vocab-def"> — states that used firearms (cannons) to conquer and centralize; Ottoman, Safavid, Mughal</span></div>
+            <div class="vocab-item"><span class="vocab-term">Tribute system</span><span class="vocab-def"> — smaller states/rulers paid gifts to Chinese emperor to show submission; China = center of world</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sub-title">Maritime Exploration</div>
+          <ul>
+            <li><strong>Why Europe?</strong> — Ottoman middlemen blocked direct trade w/ Asia → Europeans sought sea routes → profit motive + Renaissance curiosity</li>
+            <li><strong>Tech:</strong> caravel (maneuverable ship), astrolabe (navigation), lateen sail, compass, portolan charts</li>
+            <li><strong>Portugal:</strong> Prince Henry the Navigator; Bartolomeu Dias (Cape of Good Hope, 1488); Vasco da Gama (India, 1498)</li>
+            <li><strong>Spain:</strong> Columbus (Caribbean, 1492); Amerigo Vespucci; Magellan (circumnavigation, 1519–22)</li>
+            <li><strong>Treaty of Tordesillas (1494)</strong> — Spain &amp; Portugal split "New World" along a line</li>
+            <li><strong>Ming China:</strong> Zheng He voyages (1405–33) showed naval power but China turned inward; Europe filled the vacuum</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Columbian Exchange</div>
+          <table class="mini-table">
+            <tr><th>Americas → Europe/Asia</th><th>Europe/Asia → Americas</th></tr>
+            <tr><td>Potatoes, maize (corn), tomatoes, tobacco, cacao, peanuts, vanilla, rubber</td><td>Horses, cattle, pigs, wheat, rice, sugar cane, smallpox, measles, influenza</td></tr>
+          </table>
+          <ul style="margin-top:3pt">
+            <li><strong>Demographic impact:</strong> disease killed up to 90% of indigenous Americans → Great Dying → enabled European conquest</li>
+            <li><strong>Potato/maize</strong> → population booms in Europe and China</li>
+            <li><strong>Silver</strong> from Potosí → global trade economy; inflation in Spain &amp; China</li>
+          </ul>
+          <div class="tip-box tip-red">⚠ Disease, NOT military, was #1 factor in European conquest. Always say "smallpox/measles killed ~90% of native populations."</div>
+          <div class="tip-box tip-teal">✓ DBQ: Columbian Exchange = top comparison topic. Include BOTH biological AND economic effects for full credit.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 3-4B: CONNECTIONS & LABOR -->
+  <div class="section col-span-2">
+    <div class="section-header sh-blue">
+      <h2>Units 3–4B: Maritime Empires &amp; Coerced Labor</h2>
+      <span class="unit-tag">c. 1450–1750</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Maritime Empires &amp; Trade Companies</div>
+          <ul>
+            <li><strong>Spanish:</strong> encomienda → hacienda system; silver mines at Potosí (Bolivia); Manila Galleons connected Americas-Asia</li>
+            <li><strong>Portuguese:</strong> trading post empire (feitorias); controlled Indian Ocean early; Brazil colony</li>
+            <li><strong>Dutch:</strong> VOC (Vereenigde Oost-Indische Compagnie) = world's 1st joint-stock company; controlled spice trade in Indonesia</li>
+            <li><strong>British:</strong> EIC (East India Company) in India; N. American colonies; plantation economy</li>
+            <li><strong>French:</strong> fur trade in N. America; plantation colonies in Caribbean</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Coerced Labor Systems</div>
+          <table class="mini-table">
+            <tr><th>System</th><th>Where</th><th>Details</th></tr>
+            <tr><td><strong>Chattel slavery</strong></td><td>Americas</td><td>Africans as property; hereditary; racialized</td></tr>
+            <tr><td><strong>Encomienda</strong></td><td>Spanish Americas</td><td>Forced native labor for tribute; brutal but legally ≠ slavery</td></tr>
+            <tr><td><strong>Mit'a (colonial)</strong></td><td>Spanish Peru</td><td>Adapted Inca labor draft for silver mines</td></tr>
+            <tr><td><strong>Serfdom</strong></td><td>Russia/E. Europe</td><td>Bound to land; owed labor to lord; not sold as person</td></tr>
+            <tr><td><strong>Indentured servitude</strong></td><td>Br. colonies</td><td>Contract labor for passage; 5–7 yr term; then free</td></tr>
+            <tr><td><strong>Debt peonage</strong></td><td>Spanish Americas</td><td>Workers kept in perpetual debt; couldn't leave</td></tr>
+          </table>
+          <hr class="divider">
+          <div class="sub-title">Key Vocabulary — Trade</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Joint-stock company</span><span class="vocab-def"> — investors pool money; share profits and risks; e.g. VOC, EIC</span></div>
+            <div class="vocab-item"><span class="vocab-term">Mercantilism</span><span class="vocab-def"> — economic theory: colonies exist to enrich mother country; export raw materials, import finished goods; ↑ gold/silver</span></div>
+            <div class="vocab-item"><span class="vocab-term">Triangular Trade</span><span class="vocab-def"> — Europe (manufactured goods) → Africa (enslaved people) → Americas (raw materials) → back to Europe</span></div>
+            <div class="vocab-item"><span class="vocab-term">Middle Passage</span><span class="vocab-def"> — brutal transatlantic crossing for enslaved Africans; ~12M transported; ~15–20% mortality</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sub-title">Social Hierarchies (Casta System)</div>
+          <p>Spanish colonial hierarchy based on race/ancestry:</p>
+          <ul style="margin-top:2pt">
+            <li><strong>Peninsulares</strong> — born in Spain; highest status</li>
+            <li><strong>Criollos</strong> — Spanish descent, born in Americas; couldn't hold top offices</li>
+            <li><strong>Mestizos</strong> — Spanish + indigenous</li>
+            <li><strong>Mulattos</strong> — Spanish + African</li>
+            <li><strong>Indigenous</strong> — conquered peoples</li>
+            <li><strong>Enslaved Africans</strong> — lowest, no legal rights</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Resistance to Slavery &amp; Colonialism</div>
+          <ul>
+            <li><strong>Maroon communities</strong> — escaped enslaved people formed free settlements (e.g. Jamaica, Brazil)</li>
+            <li><strong>Stono Rebellion (1739)</strong> — largest slave revolt in colonial S. Carolina</li>
+            <li><strong>Syncretic religions</strong> — blended African + Catholic: Vodou (Haiti), Candomblé (Brazil), Santería (Cuba)</li>
+            <li><strong>Maintaining African culture</strong> — language, music, stories preserved despite suppression</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Key People &amp; Concepts</div>
+          <div class="key-people">
+            <div class="person"><div class="person-name">Bartolomé de las Casas</div><div class="person-fact">Spanish priest; documented atrocities of encomienda; advocated for indigenous rights</div></div>
+            <div class="person"><div class="person-name">Potosí</div><div class="person-fact">Silver mine in Bolivia; used mit'a labor; funded Spanish empire; connected global economy</div></div>
+            <div class="person"><div class="person-name">VOC (Dutch)</div><div class="person-fact">1st joint-stock company; monopolized spice trade; controlled Batavia (Jakarta)</div></div>
+            <div class="person"><div class="person-name">Manila Galleons</div><div class="person-fact">Ships linking Acapulco to Manila; silver (Americas) → silk (China); 1565–1815</div></div>
+          </div>
+          <div class="tip-box tip-red">⚠ Encomienda ≠ slavery. Forced labor for tribute — brutal, but legally distinct. Chattel slavery = person as property, hereditary.</div>
+          <div class="tip-box tip-blue">✓ LEQ: Compare labor systems across regions — highlight HOW economic needs (silver, sugar, fur) shaped the TYPE of coercion used.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 5-6A: REVOLUTIONS & INDUSTRY -->
+  <div class="section col-span-2">
+    <div class="section-header sh-purple">
+      <h2>Units 5–6A: Enlightenment, Revolutions &amp; Industry</h2>
+      <span class="unit-tag">c. 1750–1900</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Enlightenment Ideas</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">John Locke</span><span class="vocab-def"> — natural rights (life, liberty, property); social contract; government by consent; influenced American Revolution</span></div>
+            <div class="vocab-item"><span class="vocab-term">Rousseau</span><span class="vocab-def"> — social contract; general will; popular sovereignty; influenced French Revolution</span></div>
+            <div class="vocab-item"><span class="vocab-term">Montesquieu</span><span class="vocab-def"> — separation of powers (executive, legislative, judicial); checks and balances</span></div>
+            <div class="vocab-item"><span class="vocab-term">Voltaire</span><span class="vocab-def"> — freedom of speech and religion; criticized Church and monarchy</span></div>
+            <div class="vocab-item"><span class="vocab-term">Adam Smith</span><span class="vocab-def"> — capitalism; free market; "invisible hand"; Wealth of Nations (1776)</span></div>
+            <div class="vocab-item"><span class="vocab-term">Karl Marx</span><span class="vocab-def"> — socialism/communism; Communist Manifesto (1848); class struggle; bourgeoisie vs. proletariat</span></div>
+            <div class="vocab-item"><span class="vocab-term">Mary Wollstonecraft</span><span class="vocab-def"> — Vindication of the Rights of Woman (1792); early feminist; applied Enlightenment to women</span></div>
+            <div class="vocab-item"><span class="vocab-term">Nationalism</span><span class="vocab-def"> — shared language/culture/history = basis for statehood; led to unification (Italy 1861, Germany 1871) and breakup of empires</span></div>
+          </div>
+          <hr class="divider">
+          <div class="sub-title">Atlantic Revolutions</div>
+          <table class="mini-table">
+            <tr><th>Revolution</th><th>Cause</th><th>Outcome</th></tr>
+            <tr><td><strong>American (1776)</strong></td><td>No taxation w/o representation; Enlightenment ideas</td><td>Republic; Constitution; Bill of Rights</td></tr>
+            <tr><td><strong>French (1789)</strong></td><td>Inequality (Estates), debt, Enlightenment</td><td>End of monarchy; Declaration of Rights; Napoleon; Reign of Terror</td></tr>
+            <tr><td><strong>Haitian (1791–1804)</strong></td><td>Slavery + racial inequality; inspired by French Rev.</td><td>1st Black republic; 1st successful slave revolt → independent nation</td></tr>
+            <tr><td><strong>Latin American (1808–25)</strong></td><td>Creole resentment; Napoleon weakened Spain</td><td>Independence from Spain; new republics (Venezuela, Mexico, etc.)</td></tr>
+          </table>
+          <div class="tip-box tip-red">⚠ Haitian Revolution was the ONLY successful slave revolt → independent nation. NEVER leave it out of comparisons about revolutions.</div>
+        </div>
+        <div>
+          <div class="sub-title">Industrial Revolution</div>
+          <ul>
+            <li><strong>Started Britain (~1760s):</strong> coal, iron, steam engine (James Watt), textile factories; why Britain? — coal/iron deposits, rivers, colonies, capital</li>
+            <li><strong>Spread:</strong> Belgium, France, Germany, US, Japan (Meiji); China and India did NOT industrialize (colonized/weak)</li>
+            <li><strong>Effects:</strong> urbanization, factory labor, child labor, pollution, longer work hours, loss of craft guilds</li>
+            <li><strong>New classes:</strong> industrial bourgeoisie (factory owners) vs. proletariat (workers)</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Reform &amp; Modernization Movements</div>
+          <table class="mini-table">
+            <tr><th>Movement</th><th>Where</th><th>What happened</th></tr>
+            <tr><td>Abolition of slavery</td><td>Britain (1833), US (1865), Brazil (1888)</td><td>Gradual emancipation; moral + economic arguments</td></tr>
+            <tr><td>Seneca Falls (1848)</td><td>USA</td><td>1st women's rights convention; Declaration of Sentiments</td></tr>
+            <tr><td>Tanzimat Reforms</td><td>Ottoman Empire</td><td>Modernize military, legal system; equal rights for non-Muslims; ultimately insufficient</td></tr>
+            <tr><td>Self-Strengthening</td><td>Qing China</td><td>Adopt Western military tech, keep Confucian values; FAILED → Boxer Rebellion</td></tr>
+            <tr><td>Meiji Restoration (1868)</td><td>Japan</td><td>Ended feudalism; railroads; conscript army; constitution (1889); industrialized; became imperialist</td></tr>
+          </table>
+          <div class="tip-box tip-teal">✓ Meiji Japan = ONLY non-Western state to fully industrialize AND become imperialist. It was BOTH colonized (Perry, 1853) AND a colonizer (Korea, Taiwan).</div>
+          <div class="tip-box tip-blue">✓ FRQ: Enlightenment IDEAS → specific REVOLUTIONS → specific OUTCOMES. The chain of causation = points.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 5-6B: IMPERIALISM -->
+  <div class="section col-span-2">
+    <div class="section-header sh-amber">
+      <h2>Units 5–6B: Imperialism, Migration &amp; Resistance</h2>
+      <span class="unit-tag">c. 1750–1900</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Rationales for Imperialism</div>
+          <ul>
+            <li><strong>Economic:</strong> raw materials, new markets, cheap labor</li>
+            <li><strong>Political:</strong> nationalism, strategic naval bases, competition between European powers</li>
+            <li><strong>Ideological:</strong> Social Darwinism ("survival of fittest" applied to races), "White Man's Burden" (Kipling), "civilizing mission" (France), Christian missionary work</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Key Events &amp; Vocab</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Berlin Conference (1884–85)</span><span class="vocab-def"> — Europeans divided Africa w/o African input; "Scramble for Africa"; nearly all continent colonized by 1914</span></div>
+            <div class="vocab-item"><span class="vocab-term">Social Darwinism</span><span class="vocab-def"> — misapplication of Darwin's evolution to justify racial hierarchy and imperialism</span></div>
+            <div class="vocab-item"><span class="vocab-term">Extraterritoriality</span><span class="vocab-def"> — foreigners exempt from local law; imposed on China via unequal treaties after Opium Wars</span></div>
+            <div class="vocab-item"><span class="vocab-term">Sphere of influence</span><span class="vocab-def"> — region where one country has dominant power without direct colonial control</span></div>
+            <div class="vocab-item"><span class="vocab-term">Economic imperialism</span><span class="vocab-def"> — control through trade, debt, and infrastructure; no formal colony; e.g. British in Argentina</span></div>
+            <div class="vocab-item"><span class="vocab-term">Unequal treaties</span><span class="vocab-def"> — forced on China after Opium Wars; opened ports, gave extraterritoriality, ceded territory</span></div>
+          </div>
+          <hr class="divider">
+          <div class="sub-title">Imperial Powers &amp; Territories</div>
+          <table class="mini-table">
+            <tr><th>Power</th><th>Key Territories</th></tr>
+            <tr><td>Britain</td><td>India, Egypt, S. Africa, Australia, Canada, Nigeria</td></tr>
+            <tr><td>France</td><td>W. Africa, Indochina (Vietnam), Algeria, Morocco</td></tr>
+            <tr><td>Japan</td><td>Korea (1910), Taiwan (1895), Manchuria</td></tr>
+            <tr><td>USA</td><td>Philippines (1898), Hawaii, Puerto Rico, Panama Canal Zone</td></tr>
+            <tr><td>Russia</td><td>Central Asia, Siberia, Caucasus</td></tr>
+            <tr><td>Belgium</td><td>Congo Free State (rubber atrocities under Leopold II)</td></tr>
+          </table>
+        </div>
+        <div>
+          <div class="sub-title">Resistance Movements</div>
+          <table class="mini-table">
+            <tr><th>Resistance</th><th>Where</th><th>Outcome</th></tr>
+            <tr><td><strong>Sepoy Mutiny (1857)</strong></td><td>India</td><td>Soldiers rebelled vs. British EIC; suppressed; Britain took direct control</td></tr>
+            <tr><td><strong>Boxer Rebellion (1899–1901)</strong></td><td>China</td><td>Chinese nationalists attacked foreigners; suppressed by 8-nation army; weakened Qing further</td></tr>
+            <tr><td><strong>Taiping Rebellion (1850–64)</strong></td><td>China</td><td>~20M dead; weakened Qing Dynasty</td></tr>
+            <tr><td><strong>Zulu Wars (1879)</strong></td><td>S. Africa</td><td>Zulus resisted British; initially won Battle of Isandlwana; ultimately defeated</td></tr>
+            <tr><td><strong>Ghost Dance Movement</strong></td><td>USA (Sioux)</td><td>Spiritual resistance; ended at Wounded Knee Massacre (1890)</td></tr>
+            <tr><td><strong>Battle of Adwa (1896)</strong></td><td>Ethiopia</td><td>Ethiopia defeated Italy; remained independent; only African state to do so</td></tr>
+          </table>
+          <hr class="divider">
+          <div class="sub-title">Migration &amp; Its Effects</div>
+          <ul>
+            <li><strong>Indentured labor:</strong> after emancipation, British brought Indians to Caribbean (Trinidad, Guyana), Fiji; Chinese to SE Asia, US</li>
+            <li><strong>Ethnic enclaves:</strong> Chinatowns, Little Italys; maintained culture in new land</li>
+            <li><strong>Nativist backlash:</strong> Chinese Exclusion Act (US, 1882); White Australia Policy; anti-immigration sentiment</li>
+            <li><strong>Export economies:</strong> cotton (Egypt), rubber (Congo), palm oil (W. Africa), guano (Peru), diamonds/gold (S. Africa) — all structured for extraction, not local development</li>
+          </ul>
+          <div class="tip-box tip-red">⚠ Japan was BOTH imperialized (Commodore Perry forced open ports, 1853) AND an imperialist (Korea, Taiwan) — know the Meiji pivot.</div>
+          <div class="tip-box tip-amber">✓ SAQ: Imperialism effects → give BOTH colonizer AND colonized perspectives. One-sided answer loses points.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 7-8: GLOBAL CONFLICT & COLD WAR -->
+  <div class="section col-span-2">
+    <div class="section-header sh-red">
+      <h2>Units 7–8: World Wars, Cold War &amp; Decolonization</h2>
+      <span class="unit-tag">c. 1900–present</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">World War I (1914–1918)</div>
+          <ul>
+            <li><strong>MAIN causes:</strong> Militarism, Alliances (Triple Entente vs. Triple Alliance), Imperialism, Nationalism</li>
+            <li><strong>Spark:</strong> assassination of Archduke Franz Ferdinand (Sarajevo, 1914)</li>
+            <li><strong>Total war:</strong> trench warfare, poison gas, machine guns, tanks, airplanes; home front mobilized</li>
+            <li><strong>Armenian Genocide (1915–16):</strong> Ottoman Turks killed ~1.5M Armenians; first modern genocide</li>
+            <li><strong>Treaty of Versailles (1919):</strong> punished Germany (war guilt clause, reparations, disarmament, territory lost) → resentment → Hitler</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Interwar Period (1918–1939)</div>
+          <ul>
+            <li><strong>Great Depression:</strong> 1929 stock crash → global unemployment → governments intervened (New Deal-USA, Five Year Plans-USSR)</li>
+            <li><strong>Rise of fascism:</strong> Hitler (Germany), Mussolini (Italy), Tojo (Japan) → extreme nationalism, authoritarianism, racism</li>
+            <li><strong>Appeasement:</strong> Britain/France allowed Hitler to take territory hoping to avoid war → backfired</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">World War II (1939–1945)</div>
+          <ul>
+            <li><strong>Axis:</strong> Germany, Italy, Japan vs. <strong>Allies:</strong> USA, Britain, USSR, France</li>
+            <li><strong>Holocaust:</strong> systematic murder of 6M Jews + 5M others (Roma, disabled, LGBTQ, Slavs)</li>
+            <li><strong>Total war:</strong> firebombing of Dresden/Tokyo; atomic bombs on Hiroshima &amp; Nagasaki (Aug 1945)</li>
+            <li><strong>~70–85M total dead</strong> — deadliest conflict in history</li>
+            <li><strong>UN founded 1945</strong> → Universal Declaration of Human Rights (1948)</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Mass Atrocities (List These!)</div>
+          <ul>
+            <li>Armenian Genocide (1915) — Ottoman Empire</li>
+            <li>Holodomor (1932–33) — Soviet-caused famine in Ukraine (~5M dead)</li>
+            <li>Holocaust (1941–45) — Nazi Germany (6M Jews)</li>
+            <li>Chinese Cultural Revolution (1966–76) — Mao's purge (millions)</li>
+            <li>Cambodian Genocide (1975–79) — Khmer Rouge (~2M dead)</li>
+            <li>Rwandan Genocide (1994) — Hutu vs. Tutsi (~800,000 in 100 days)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="sub-title">Cold War (1947–1991)</div>
+          <ul>
+            <li><strong>US (capitalism/democracy) vs. USSR (communism/authoritarianism)</strong>; no direct combat</li>
+            <li><strong>Alliances:</strong> NATO (West) vs. Warsaw Pact (East)</li>
+            <li><strong>Nuclear arms race:</strong> MAD doctrine (Mutually Assured Destruction)</li>
+            <li><strong>Proxy wars:</strong> Korea (1950–53), Vietnam (1955–75), Angola, Afghanistan (1979–89)</li>
+            <li><strong>Non-Aligned Movement:</strong> India (Nehru), Indonesia (Sukarno), Egypt (Nasser) refused to pick sides; Bandung Conference (1955)</li>
+            <li><strong>End:</strong> Soviet economic stagnation + Afghanistan failure + Gorbachev reforms (glasnost = openness, perestroika = restructuring) → Berlin Wall falls (1989) → USSR dissolves (1991)</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Decolonization</div>
+          <table class="mini-table">
+            <tr><th>Method</th><th>Examples</th></tr>
+            <tr><td><strong>Negotiated/peaceful</strong></td><td>India (1947, Gandhi's nonviolence/satyagraha), Ghana (1957, Kwame Nkrumah)</td></tr>
+            <tr><td><strong>Armed struggle</strong></td><td>Algeria vs. France (1954–62), Vietnam vs. France then US, Kenya (Mau Mau)</td></tr>
+          </table>
+          <ul style="margin-top:3pt">
+            <li><strong>India Partition (1947):</strong> Hindu India + Muslim Pakistan → mass migration, communal violence (~1M dead)</li>
+            <li><strong>Israel founded (1948):</strong> ongoing Arab-Israeli conflict; Palestinian displacement</li>
+            <li><strong>Chinese Revolution (1949):</strong> Mao + CCP → Great Leap Forward (famine, ~30M dead) → Cultural Revolution → Deng Xiaoping post-1978 market reforms</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Key Resistance Leaders</div>
+          <div class="key-people">
+            <div class="person"><div class="person-name">Mahatma Gandhi</div><div class="person-fact">Nonviolent resistance (satyagraha); led India's independence from Britain; assassinated 1948</div></div>
+            <div class="person"><div class="person-name">Nelson Mandela</div><div class="person-fact">ANC leader; anti-apartheid S. Africa; 27 yrs in prison; President 1994</div></div>
+            <div class="person"><div class="person-name">Ho Chi Minh</div><div class="person-fact">Vietnamese communist leader; fought France then US; North Vietnam</div></div>
+            <div class="person"><div class="person-name">Kwame Nkrumah</div><div class="person-fact">Led Ghana's independence (1957); Pan-Africanism; 1st sub-Saharan independent nation</div></div>
+          </div>
+          <div class="tip-box tip-red">⚠ Cold War = fought through PROXY wars, NOT direct US-USSR combat. Always name the specific proxy war.</div>
+          <div class="tip-box tip-amber">⚠ Decolonization ≠ end of problems. New states faced ethnic conflict (arbitrary colonial borders), neocolonialism, and poverty.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIT 9: GLOBALIZATION -->
+  <div class="section col-span-2">
+    <div class="section-header sh-green">
+      <h2>Unit 9: Globalization</h2>
+      <span class="unit-tag">c. 1900–present</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Economic Globalization</div>
+          <ul>
+            <li><strong>Free-market reforms:</strong> Reagan (USA), Thatcher (UK), Deng Xiaoping (China) → deregulation, privatization</li>
+            <li><strong>WTO</strong> (World Trade Organization) — governs global trade rules, reduce tariffs</li>
+            <li><strong>NAFTA</strong> (1994) — free trade: USA, Canada, Mexico (now USMCA)</li>
+            <li><strong>EU</strong> (European Union) — economic/political union; Euro currency; free movement</li>
+            <li><strong>ASEAN</strong> — SE Asian economic cooperation</li>
+            <li><strong>MNCs</strong> (multinational corporations) — shift manufacturing to Global South for cheap labor</li>
+            <li><strong>Shipping containers (1950s)</strong> — standardized, dramatically cut shipping costs → global trade boom</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Technology &amp; Communication</div>
+          <ul>
+            <li><strong>Internet:</strong> connected world; instant information; e-commerce</li>
+            <li><strong>Air travel:</strong> mass tourism; spread of diseases faster</li>
+            <li><strong>Green Revolution (1940s–70s):</strong> high-yield crop varieties, fertilizers, irrigation → fed growing world population; Norman Borlaug</li>
+            <li><strong>Medical advances:</strong> vaccines, antibiotics → ↑ life expectancy; global health organizations (WHO)</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Disease in a Globalized World</div>
+          <ul>
+            <li><strong>HIV/AIDS pandemic:</strong> identified 1980s; global spread; Sub-Saharan Africa hardest hit</li>
+            <li><strong>Ebola outbreaks:</strong> W. Africa; spread via global travel</li>
+            <li><strong>COVID-19 (2019–present):</strong> rapid global spread via air travel; WHO declared pandemic</li>
+          </ul>
+        </div>
+        <div>
+          <div class="sub-title">Environment &amp; Climate</div>
+          <ul>
+            <li><strong>Deforestation:</strong> Amazon, SE Asia; driven by agriculture and logging</li>
+            <li><strong>Desertification:</strong> Sahel region; overgrazing + climate change</li>
+            <li><strong>Greenhouse gases:</strong> CO2 from industrialization → global warming</li>
+            <li><strong>Kyoto Protocol (1997):</strong> nations commit to reduce emissions; US didn't ratify</li>
+            <li><strong>Paris Agreement (2015):</strong> 195 nations; limit warming to 1.5–2°C above pre-industrial levels</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Resistance to Globalization</div>
+          <ul>
+            <li><strong>Anti-globalization protests:</strong> WTO Seattle (1999); argued MNCs exploit developing nations</li>
+            <li><strong>Religious fundamentalism:</strong> reaction against Western secular culture; Islamic fundamentalism, Christian nationalism</li>
+            <li><strong>Ethnic nationalism:</strong> preservation of local identity vs. homogenizing global culture</li>
+            <li><strong>Local culture vs. Americanization:</strong> McDonaldization, Hollywood dominance resisted</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Global Organizations</div>
+          <table class="mini-table">
+            <tr><th>Org</th><th>Purpose</th></tr>
+            <tr><td>UN (1945)</td><td>International peace; Universal Declaration of Human Rights</td></tr>
+            <tr><td>World Bank / IMF</td><td>Loans to developing nations; often with austerity conditions</td></tr>
+            <tr><td>WHO</td><td>Global health coordination</td></tr>
+            <tr><td>NATO</td><td>Western military alliance; "attack on one = attack on all"</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAM STRATEGY -->
+  <div class="section col-span-2">
+    <div class="section-header sh-gray">
+      <h2>Exam Strategy: DBQ · LEQ · SAQ · MC</h2>
+      <span class="unit-tag">Test Tips</span>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div>
+          <div class="sub-title">DBQ (Document-Based Question) — 25%</div>
+          <ul>
+            <li><strong>7 docs, 60 min</strong> (15 min reading + 45 min writing)</li>
+            <li><strong>Thesis (1pt):</strong> must make a historically defensible claim beyond restating prompt; at least 2 sentences; appears in intro OR conclusion</li>
+            <li><strong>Contextualization (1pt):</strong> describe broader historical context BEFORE or around the time of the prompt; must be a whole paragraph, not just a sentence</li>
+            <li><strong>Evidence from docs:</strong> use 3 docs = 1pt; use 6+ docs = 2pts</li>
+            <li><strong>Sourcing / HAPP (1pt):</strong> analyze Historical situation, Audience, Purpose, or Point of view for 3+ docs; explain HOW it affects content/reliability</li>
+            <li><strong>Outside evidence (1pt):</strong> bring in specific fact NOT in the docs</li>
+            <li><strong>Complexity (1pt):</strong> compare across time, geography, or scale; explain both cause AND effect; discuss both similarity AND difference</li>
+          </ul>
+          <div class="tip-box tip-teal">✓ During 15-min read: group docs by theme, draft thesis, note HAPP for each doc, plan your outside evidence before writing.</div>
+          <hr class="divider">
+          <div class="sub-title">LEQ (Long Essay Question) — 15%</div>
+          <ul>
+            <li><strong>Choose 1 of 3 prompts, 40 min</strong></li>
+            <li><strong>Thesis (1pt):</strong> defensible claim with line of reasoning</li>
+            <li><strong>Context (1pt):</strong> broad context before/around prompt</li>
+            <li><strong>Evidence:</strong> 1 specific example = 1pt; 2+ explained examples = 2pts</li>
+            <li><strong>Analysis (1pt):</strong> use historical reasoning (continuity/change over time, comparison, or causation)</li>
+            <li><strong>Complexity (1pt):</strong> corroborate, qualify, or modify your argument</li>
+          </ul>
+        </div>
+        <div>
+          <div class="sub-title">SAQ (Short Answer Question) — 20%</div>
+          <ul>
+            <li><strong>3 questions, 40 min</strong> (Q1–2 have sources; Q3 or Q4 — choose 1, no source)</li>
+            <li><strong>ACE method:</strong> Answer (the question directly), Cite evidence (specific name/date/event), Explain (the significance/connection)</li>
+            <li>Be SPECIFIC — name dates, people, places, and events. Vague = no points.</li>
+            <li>No thesis or intro needed; just answer A, B, C parts directly</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Multiple Choice — 40%</div>
+          <ul>
+            <li><strong>55 questions, 55 min</strong> (stimulus-based: map, text, image, graph)</li>
+            <li>Eliminate 2 obviously wrong → pick best remaining</li>
+            <li>Watch time-period boundaries — read question for "before 1750" vs. "after 1900"</li>
+            <li>Stimulus often shows a primary source; ask yourself: who wrote this, when, why?</li>
+          </ul>
+          <hr class="divider">
+          <div class="sub-title">Universal Thesis Formula</div>
+          <div class="tip-box tip-purple">
+            "[Although/While/Despite + counterargument], [your claim] because [reason 1], [reason 2], and [reason 3]."<br>
+            Example: "Although the Mongols were destructive conquerors, they ultimately facilitated cross-cultural exchange by maintaining trade routes, diffusing technology, and promoting religious tolerance."
+          </div>
+          <hr class="divider">
+          <div class="sub-title">Historical Reasoning Skills</div>
+          <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-term">Causation</span><span class="vocab-def"> — explain WHY something happened; causes + effects</span></div>
+            <div class="vocab-item"><span class="vocab-term">Continuity &amp; Change (CCOT)</span><span class="vocab-def"> — what stayed the same AND what changed over time</span></div>
+            <div class="vocab-item"><span class="vocab-term">Comparison</span><span class="vocab-def"> — similarities AND differences across regions/time periods</span></div>
+            <div class="vocab-item"><span class="vocab-term">Contextualization</span><span class="vocab-def"> — connect to broader history BEFORE the event/period</span></div>
+            <div class="vocab-item"><span class="vocab-term">Corroboration</span><span class="vocab-def"> — connect multiple sources to strengthen an argument</span></div>
+            <div class="vocab-item"><span class="vocab-term">Sourcing (HAPP)</span><span class="vocab-def"> — Historical situation, Audience, Purpose, Point of view; HOW affects content</span></div>
+          </div>
+          <div class="tip-box tip-red">⚠ #1 mistake: VAGUE answers. Always name SPECIFIC people, dates, places, and events — not "some countries" or "many people."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTTOM ROW: MUST-KNOW VOCAB & PEOPLE -->
+<div class="grid-3" style="margin-top:5pt">
+
+  <div class="section">
+    <div class="section-header sh-teal">
+      <h2>Must-Know Key People</h2>
+      <span class="unit-tag">All Units</span>
+    </div>
+    <div class="section-body">
+      <table class="mini-table">
+        <tr><th>Person</th><th>Who / Why Important</th></tr>
+        <tr><td><strong>Mansa Musa</strong></td><td>Mali king; hajj (1324); richest person in history; put Mali on European maps</td></tr>
+        <tr><td><strong>Genghis Khan</strong></td><td>United Mongols; conquered Eurasia; died 1227; founded largest land empire</td></tr>
+        <tr><td><strong>Ibn Battuta</strong></td><td>Muslim traveler; ~75k miles; key primary source for 14th c. trade</td></tr>
+        <tr><td><strong>Zheng He</strong></td><td>Chinese admiral; 7 voyages (1405–33); Indian Ocean; showed Ming naval power</td></tr>
+        <tr><td><strong>Vasco da Gama</strong></td><td>Portuguese; reached India by sea (1498); opened direct Europe-Asia trade</td></tr>
+        <tr><td><strong>Columbus</strong></td><td>Spanish/Italian; reached Caribbean (1492); began Columbian Exchange</td></tr>
+        <tr><td><strong>Magellan</strong></td><td>First circumnavigation (1519–22); proved Earth was round</td></tr>
+        <tr><td><strong>Bartolomé de las Casas</strong></td><td>Spanish priest; documented encomienda abuses; advocated for indigenous</td></tr>
+        <tr><td><strong>John Locke</strong></td><td>Natural rights; social contract; influenced American Revolution</td></tr>
+        <tr><td><strong>Toussaint Louverture</strong></td><td>Led Haitian Revolution; 1st successful slave revolt; 1st Black republic</td></tr>
+        <tr><td><strong>Simón Bolívar</strong></td><td>Led S. American independence from Spain; "El Libertador"</td></tr>
+        <tr><td><strong>Karl Marx</strong></td><td>Communist Manifesto (1848); class struggle; influenced USSR, China, Cuba</td></tr>
+        <tr><td><strong>Adam Smith</strong></td><td>Wealth of Nations (1776); father of capitalism; free markets</td></tr>
+        <tr><td><strong>Mahatma Gandhi</strong></td><td>Nonviolent resistance (satyagraha); led India's independence from Britain</td></tr>
+        <tr><td><strong>Mao Zedong</strong></td><td>Chinese Communist leader; Great Leap Forward; Cultural Revolution</td></tr>
+        <tr><td><strong>Nelson Mandela</strong></td><td>Anti-apartheid; 27 yrs prison; S. Africa's 1st Black president (1994)</td></tr>
+        <tr><td><strong>Gorbachev</strong></td><td>USSR leader; glasnost &amp; perestroika; reforms led to USSR collapse (1991)</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header sh-blue">
+      <h2>Must-Know Dates &amp; Events</h2>
+      <span class="unit-tag">All Units</span>
+    </div>
+    <div class="section-body">
+      <table class="mini-table">
+        <tr><th>Date</th><th>Event &amp; Significance</th></tr>
+        <tr><td><strong>1054</strong></td><td>Great Schism — Roman Catholic + Eastern Orthodox Christianity split</td></tr>
+        <tr><td><strong>1095</strong></td><td>First Crusade — Europeans invaded Holy Land; cultural exchange w/ Islam</td></tr>
+        <tr><td><strong>1206</strong></td><td>Genghis Khan unites Mongols; begins conquests</td></tr>
+        <tr><td><strong>1324</strong></td><td>Mansa Musa's hajj; Mali's wealth displayed to world</td></tr>
+        <tr><td><strong>1340s–50s</strong></td><td>Black Death peaks in Europe; ~1/3 dead; end of serfdom</td></tr>
+        <tr><td><strong>1405–1433</strong></td><td>Zheng He voyages; China explores Indian Ocean then withdraws</td></tr>
+        <tr><td><strong>1453</strong></td><td>Ottoman Turks take Constantinople; end of Byzantine Empire</td></tr>
+        <tr><td><strong>1492</strong></td><td>Columbus reaches Caribbean; Reconquista ends; Columbian Exchange begins</td></tr>
+        <tr><td><strong>1494</strong></td><td>Treaty of Tordesillas; Spain &amp; Portugal divide New World</td></tr>
+        <tr><td><strong>1498</strong></td><td>Da Gama reaches India by sea; new trade route</td></tr>
+        <tr><td><strong>1517</strong></td><td>Protestant Reformation (Luther); challenges Catholic Church</td></tr>
+        <tr><td><strong>1600s</strong></td><td>VOC &amp; EIC founded; joint-stock companies dominate trade</td></tr>
+        <tr><td><strong>1776</strong></td><td>American Declaration of Independence; Enlightenment ideas in practice</td></tr>
+        <tr><td><strong>1789</strong></td><td>French Revolution begins; Declaration of Rights of Man</td></tr>
+        <tr><td><strong>1804</strong></td><td>Haitian independence; 1st Black republic; only successful slave revolt</td></tr>
+        <tr><td><strong>1848</strong></td><td>Communist Manifesto; Seneca Falls; revolutions across Europe</td></tr>
+        <tr><td><strong>1857</strong></td><td>Sepoy Mutiny (India); Britain takes direct control</td></tr>
+        <tr><td><strong>1868</strong></td><td>Meiji Restoration; Japan modernizes rapidly</td></tr>
+        <tr><td><strong>1884–85</strong></td><td>Berlin Conference; Scramble for Africa; no African input</td></tr>
+        <tr><td><strong>1914–18</strong></td><td>WWI; 20M dead; Treaty of Versailles; Armenian Genocide</td></tr>
+        <tr><td><strong>1917</strong></td><td>Russian Revolution; Bolsheviks take power; USSR founded 1922</td></tr>
+        <tr><td><strong>1929</strong></td><td>Great Depression begins; global unemployment; rise of fascism</td></tr>
+        <tr><td><strong>1939–45</strong></td><td>WWII; Holocaust; atomic bombs; 70M+ dead; UN founded</td></tr>
+        <tr><td><strong>1947</strong></td><td>India independence; Partition; Cold War begins (Truman Doctrine)</td></tr>
+        <tr><td><strong>1949</strong></td><td>Chinese Communist Revolution; Mao founds People's Republic</td></tr>
+        <tr><td><strong>1957</strong></td><td>Ghana independence; 1st sub-Saharan African nation free of colonial rule</td></tr>
+        <tr><td><strong>1989</strong></td><td>Berlin Wall falls; Tiananmen Square massacre; Cold War ending</td></tr>
+        <tr><td><strong>1991</strong></td><td>USSR dissolves; Cold War ends; apartheid ending in S. Africa</td></tr>
+        <tr><td><strong>1994</strong></td><td>Rwandan Genocide; Mandela elected S. African president; NAFTA</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header sh-purple">
+      <h2>Must-Know Vocab Master List</h2>
+      <span class="unit-tag">All Units</span>
+    </div>
+    <div class="section-body">
+      <table class="mini-table">
+        <tr><th>Term</th><th>Definition</th></tr>
+        <tr><td><strong>Absolutism</strong></td><td>Monarch holds unlimited power; "I am the state" — Louis XIV of France</td></tr>
+        <tr><td><strong>Apartheid</strong></td><td>S. African system of racial segregation (1948–1994); non-whites segregated</td></tr>
+        <tr><td><strong>Bourgeoisie</strong></td><td>Marx: middle class / factory owners; controlled means of production</td></tr>
+        <tr><td><strong>Caliphate</strong></td><td>Islamic state led by caliph (successor to Muhammad); political + religious</td></tr>
+        <tr><td><strong>Capitalism</strong></td><td>Private ownership of production; profit motive; free market</td></tr>
+        <tr><td><strong>Colonialism</strong></td><td>Political/economic control of one country by another; settles population</td></tr>
+        <tr><td><strong>Communism</strong></td><td>State ownership of production; no private property; classless society (Marx's ideal)</td></tr>
+        <tr><td><strong>Confucianism</strong></td><td>Chinese philosophy: filial piety, hierarchy, harmony; 5 relationships</td></tr>
+        <tr><td><strong>Cultural diffusion</strong></td><td>Spread of ideas, culture, tech from one society to another via trade/conquest</td></tr>
+        <tr><td><strong>Decolonization</strong></td><td>Process by which colonies gained independence (mainly 1945–1975)</td></tr>
+        <tr><td><strong>Diaspora</strong></td><td>Dispersal of people from homeland; maintain cultural identity abroad</td></tr>
+        <tr><td><strong>Dynasty</strong></td><td>Ruling family that passes power through generations</td></tr>
+        <tr><td><strong>Fascism</strong></td><td>Ultranationalism + authoritarianism + militarism; anti-communist; e.g. Hitler, Mussolini</td></tr>
+        <tr><td><strong>Genocide</strong></td><td>Systematic extermination of an ethnic, racial, or religious group</td></tr>
+        <tr><td><strong>Glasnost</strong></td><td>Gorbachev's "openness" policy; freedom of press/speech in USSR</td></tr>
+        <tr><td><strong>Hegemony</strong></td><td>Dominance of one state/culture over others</td></tr>
+        <tr><td><strong>Imperialism</strong></td><td>Extending a nation's power over another through economic, political, or military means</td></tr>
+        <tr><td><strong>Industrialization</strong></td><td>Shift from agriculture to manufacturing; factories, urbanization</td></tr>
+        <tr><td><strong>MAD doctrine</strong></td><td>Mutually Assured Destruction; nuclear deterrence in Cold War</td></tr>
+        <tr><td><strong>Modernization</strong></td><td>Adoption of Western-style technology, institutions, and ideas</td></tr>
+        <tr><td><strong>Neocolonialism</strong></td><td>Economic control of formerly colonized nations without direct rule; debt, trade terms</td></tr>
+        <tr><td><strong>Patriarchy</strong></td><td>Social system where men hold dominant power; universal in this course</td></tr>
+        <tr><td><strong>Perestroika</strong></td><td>Gorbachev's "restructuring"; economic reforms in USSR</td></tr>
+        <tr><td><strong>Proletariat</strong></td><td>Marx: working class; sell their labor; exploited by bourgeoisie</td></tr>
+        <tr><td><strong>Proxy war</strong></td><td>Conflict where major powers support opposing sides without direct fighting</td></tr>
+        <tr><td><strong>Satyagraha</strong></td><td>Gandhi's "truth-force"; nonviolent civil disobedience</td></tr>
+        <tr><td><strong>Secularism</strong></td><td>Separation of religion from government and public life</td></tr>
+        <tr><td><strong>Sovereignty</strong></td><td>Supreme authority of a state over its own territory</td></tr>
+        <tr><td><strong>Totalitarianism</strong></td><td>Government controls ALL aspects of life (political, social, economic); e.g. USSR, Nazi Germany</td></tr>
+        <tr><td><strong>Urbanization</strong></td><td>Movement of people from rural areas to cities; driven by industrialization</td></tr>
+        <tr><td><strong>Zionism</strong></td><td>Movement for a Jewish homeland in Palestine; emerged late 19th c.; Israel founded 1948</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align:center; font-size:6pt; color:#888; margin-top:6pt; border-top:0.5pt solid #d3d1c7; padding-top:4pt;">
+  AP World History: Modern Ultimate Cheat Sheet &nbsp;|&nbsp; Units 1–9 (c. 1200–present) &nbsp;|&nbsp; For educational use &nbsp;|&nbsp; Good luck!
+</div>
+
+</body>
+</html>
